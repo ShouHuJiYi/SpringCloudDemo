@@ -1,0 +1,44 @@
+#
+# Copyright © 2020 yonghong.zhang (shouhujiyi@gmail.com)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#启动端口
+server:
+  port: 8080
+
+spring:
+  #程序别名
+  application:
+    name: microservice-provider
+  #JPA配置
+  jpa:
+    generate-ddl: false #是否生成DDL语句
+    show-sql: true      #显示SQL
+    hibernate:
+      ddl-auto: none    #不对DDL语句进行处理
+  #数据源配置
+  datasource:
+    platform: h2                         #数据库
+    schema: classpath:static/schema.sql  #建表语句
+    data: classpath:static/data.sql      #数据语句
+
+#日志配置
+logging:
+  level:
+    root: INFO                                              #根级别
+    org.hibernate: INFO                                     #hibernate 基本
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE    #打印SQL日志
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE #打印SQL日志
+
