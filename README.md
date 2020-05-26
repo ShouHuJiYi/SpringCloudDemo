@@ -9,3 +9,5 @@
 **`microservice-eureka-demo`** `Spring Boot` 使用`eureka`的简单示例
 
 **`microservice-feign-demo`** `Spring Boot` 使用`openFeign`的简单示例
+
+**`microservice-hystrix-demo`** `Spring Boot` 使用`hystrix`的简单示例
