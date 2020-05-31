@@ -11,3 +11,5 @@
 **`microservice-feign-demo`** `Spring Boot` 使用`openFeign`的简单示例
 
 **`microservice-hystrix-demo`** `Spring Boot` 使用`hystrix`的简单示例
+
+**`microservice-zuul-demo`** `Spring Boot` 使用`zuul`的简单示例
