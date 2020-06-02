@@ -1,0 +1,39 @@
+#
+# Copyright © 2020 yonghong.zhang (shouhujiyi@gmail.com)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+#端口
+server:
+  port: 8760
+#应用名称
+spring:
+  application:
+    name: microservice-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: consumer                    #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: lb://microservice-consumer #匹配后提供服务的路由地址且做负载均衡
+          predicates:
+            - Path=/consumer/**           # 断言，路径相匹配的进行路由
+#服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+

@@ -13,3 +13,5 @@
 **`microservice-hystrix-demo`** `Spring Boot` 使用`hystrix`的简单示例
 
 **`microservice-zuul-demo`** `Spring Boot` 使用`zuul`的简单示例
+
+**`microservice-gateway-demo`** `Spring Boot` 使用`gateway`的简单示例
