@@ -15,3 +15,5 @@
 **`microservice-zuul-demo`** `Spring Boot` 使用`zuul`的简单示例
 
 **`microservice-gateway-demo`** `Spring Boot` 使用`gateway`的简单示例
+
+**`microservice-zipkin-demo`** `Spring Boot` 使用`zipkin`的简单示例
